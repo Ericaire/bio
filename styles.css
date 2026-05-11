@@ -230,10 +230,7 @@ h3 {
 .thumb {
   display: block;
   align-self: start;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: #fff;
+  background: transparent;
 }
 
 .thumb img {
