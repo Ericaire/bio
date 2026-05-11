@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Suzhe Xu - undergraduate researcher in generative video models, diffusion distillation, and real-time video inverse problems."
+    >
+    <title>Suzhe Xu</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <section class="intro">
+        <div class="intro-copy">
+          <p class="eyebrow">Undergraduate Researcher in Generative Video AI</p>
+          <h1>Suzhe Xu</h1>
+          <p class="lead">
+            I work on real-time video inverse problem solving with diffusion
+            priors, with a focus on distillation, causal streaming inference,
+            and efficient latent representations.
+          </p>
+          <p>
+            I am a B.Eng. student in Artificial Intelligence at Huaqiao
+            University and a research intern at Peking University, advised by
+            Prof. He Sun and Wenzheng Chen. My recent work builds
+            <strong>InstantViR</strong> and <strong>InstantViR++</strong>,
+            turning slow video diffusion posterior sampling into one-step
+            real-time reconstruction systems.
+          </p>
+          <div class="links" id="contact">
+            <a href="mailto:ericxu0713@163.com">Email</a>
+            <a href="https://github.com/ericxu0713">GitHub</a>
+            <a href="assets/cv-preview.png">CV Preview</a>
+          </div>
+        </div>
+
+        <figure class="portrait-card">
+          <img src="assets/profile.png" alt="Portrait of Suzhe Xu">
+          <figcaption>
+            Huaqiao University B.Eng. AI<br>
+            Peking University Research Intern
+          </figcaption>
+        </figure>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="research">
+        <div class="section-heading">
+          <p class="eyebrow">Research</p>
+          <h2>Real-Time Video Reconstruction with Diffusion Priors</h2>
+        </div>
+        <div class="grid three">
+          <article class="card">
+            <span class="tag">Diffusion Distillation</span>
+            <h3>One-Step Posterior Solvers</h3>
+            <p>
+              Distilling powerful bidirectional video diffusion teachers into
+              causal students that directly map degraded videos to clean
+              reconstructions.
+            </p>
+          </article>
+          <article class="card">
+            <span class="tag">Streaming Inference</span>
+            <h3>Causal Autoregressive Video</h3>
+            <p>
+              Block-wise causal attention and KV caching make inverse problem
+              solving compatible with low-latency, interactive video streams.
+            </p>
+          </article>
+          <article class="card">
+            <span class="tag">Efficient Latents</span>
+            <h3>Fast Video Tokenizers</h3>
+            <p>
+              LeanVAE and DA-VAE style compressed latent spaces reduce the VAE
+              and DiT bottlenecks while preserving teacher supervision.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="publications">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Publications and Manuscripts</h2>
+        </div>
+
+        <article class="paper highlight">
+          <a class="thumb" href="https://ai4scientificimaging.org/instantvir">
+            <img src="assets/instantvir.svg" alt="InstantViR thumbnail">
+          </a>
+          <div>
+            <h3>
+              <a href="https://ai4scientificimaging.org/instantvir">
+                InstantViR: Real-Time Video Inverse Problem Solver with
+                Distilled Diffusion Prior
+              </a>
+            </h3>
+            <p class="authors">
+              Weimin Bai*, <strong>Suzhe Xu*</strong>, Yiwei Ren, Jinhua Hao,
+              Ming Sun, Wenzheng Chen, He Sun
+            </p>
+            <p class="venue">
+              arXiv 2025. CVPR 2026 Highlight.
+            </p>
+            <p>
+              Introduces a paired-data-free amortized inference framework that
+              distills a video diffusion teacher into a causal one-step student
+              for video inpainting, Gaussian deblurring, super-resolution, and
+              text-guided reconstruction.
+            </p>
+            <ul class="facts">
+              <li>One-step solver for streaming video inverse problems.</li>
+              <li>Teacher-space regularized LeanVAE for low-latency decoding.</li>
+              <li>Over 35 FPS at 832 x 480 with up to 100x speedup.</li>
+            </ul>
+            <p class="paper-links">
+              <a href="https://ai4scientificimaging.org/instantvir">Project</a>
+              <a href="https://arxiv.org/abs/2511.14208">arXiv</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="paper" id="instantvirpp">
+          <a class="thumb" href="#instantvirpp">
+            <img src="assets/instantvirpp.svg" alt="InstantViR++ thumbnail">
+          </a>
+          <div>
+            <h3>
+              <a href="../Video_Neurips_2026/neurips_2026.tex">
+                Bridged Posterior Distillation for Real-Time Video Inverse
+                Problems
+              </a>
+            </h3>
+            <p class="authors">
+              <strong>Suzhe Xu</strong>, Weimin Bai, Jinhua Hao, Ming Sun,
+              Wenzheng Chen, He Sun
+            </p>
+            <p class="venue">
+              Manuscript in preparation. InstantViR++.
+            </p>
+            <p>
+              Builds on InstantViR by identifying three distillation gaps:
+              causal information mismatch, latent-space mismatch, and objective
+              mismatch. The framework combines CAI, BDC, and CLA to improve
+              sharpness, training stability, and throughput.
+            </p>
+            <ul class="facts">
+              <li>CAI avoids posterior-mean collapse in causal students.</li>
+              <li>BDC reduces DiT tokens by 4x with zero inference overhead.</li>
+              <li>CLA improves PSNR by 4.5 dB over fixed-weight training.</li>
+            </ul>
+            <p class="paper-links">
+              <span>Draft coming soon</span>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2>Research and Engineering</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <time>Jun. 2025 - Present</time>
+            <h3>Peking University - Research Intern</h3>
+            <p>
+              Working on video generation and inverse problems, including
+              distillation-based acceleration, LeanVAE adaptation, causal
+              autoregressive solvers, and real-time reconstruction pipelines.
+            </p>
+          </article>
+          <article>
+            <time>Jan. 2026 - Present</time>
+            <h3>Kuaishou Technology - Algorithm Research Intern</h3>
+            <p>
+              Working on representation learning, video generation, and
+              agentic coding systems, including KAT-Coder-V2 and multi-agent
+              reinforcement learning stabilization.
+            </p>
+          </article>
+          <article>
+            <time>Sept. 2024 - June 2025</time>
+            <h3>Huaqiao University - Research Assistant</h3>
+            <p>
+              Studied multimodal image segmentation and medical imaging
+              adaptation of Segment Anything style models, with emphasis on
+              decision-level prompt selection.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section compact">
+        <div class="section-heading">
+          <p class="eyebrow">Awards</p>
+          <h2>Selected Honors</h2>
+        </div>
+        <ul class="awards">
+          <li>National Scholarship, top 0.4% nationwide in China, 2024.</li>
+          <li>Overall Rank 1/40 and GPA Rank 4/40 at Huaqiao University.</li>
+          <li>Outstanding Camper, AI Summer Camp of Datawhale and Alibaba Cloud Tianchi.</li>
+          <li>First Prize (Provincial), Contemporary Undergraduate Mathematical Contest in Modeling.</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Last updated May 2026. Built as a lightweight static homepage.
+      </p>
+    </footer>
+  </body>
+</html>
